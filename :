@@ -1,0 +1,18 @@
+Temp rename to fix case sensitivity
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: Srinivas Saripalli <srini@Srinivass-MacBook-Pro.local>
+#
+# interactive rebase in progress; onto f88d9c1
+# Last command done (1 command done):
+#    pick 0929efa Temp rename to fix case sensitivity
+# Next command to do (1 remaining command):
+#    pick fd7e6ea Add: components folder added again
+# You are currently rebasing branch 'main' on 'f88d9c1'.
+#
+# Changes to be committed:
+#	new file:   components/Header.js
+#	new file:   components/HeroSlider.js
+#
