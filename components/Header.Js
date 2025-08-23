@@ -1,10 +1,24 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
     <header style={{ position: "sticky", top: 0, background: "#fff", borderBottom: "1px solid #e5e7eb", zIndex: 10 }}>
       <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", height: 64 }}>
-        <Link href="/" className="logo" style={{ fontWeight: 800 }}>RoboServe</Link>
+        {/* Logo + Brand */}
+        <Link href="/" aria-label="Springle Robotics Home" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+          {/* Ensure the file exists at /public/logo.png */}
+          <Image
+            src="/logo.png"
+            alt="Springle Robotics Logo"
+            width={140}       // tweak as needed
+            height={40}       // tweak as needed
+            priority
+          />
+          <span style={{ fontWeight: 800, color: "#2E7D32" }}>Springle Robotics</span>
+        </Link>
+
+        {/* Nav */}
         <nav style={{ display: "flex", gap: 16 }}>
           <Link href="/solutions">Solutions</Link>
           <Link href="/products">Products</Link>
