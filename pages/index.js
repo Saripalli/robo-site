@@ -1,7 +1,7 @@
 // pages/index.js
 import Head from "next/head";
-import Image from "next/image";
-import HeroSlider from "../components/HeroSlider"; // <- make sure this path matches your file
+import Header from "../components/Header";        // ← uses the Header.js you just fixed
+import HeroSlider from "../components/HeroSlider"; // ← your Swiper-based slider
 
 export default function Home() {
   return (
@@ -10,62 +10,30 @@ export default function Home() {
         <title>Springle Robotics – Smart Robots for Smarter Workplaces</title>
         <meta
           name="description"
-          content="Robots for cafeterias, warehouses, and hospitals. Delivery, logistics, and sanitation automation."
+          content="Autonomous service robots for cafeterias, warehouses, and hospitals — delivery, logistics, and sanitation."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {/* Optional social share image (add /public/og-cover.jpg if you have one) */}
+        {/* <meta property="og:image" content="/og-cover.jpg" /> */}
       </Head>
 
-      {/* Page wrapper */}
+      {/* Page background + base font */}
       <div style={{ fontFamily: "Arial, sans-serif", backgroundColor: "#fdf8f3", minHeight: "100vh" }}>
+        {/* Top navigation/header (with logo) */}
+        <Header />
 
-        {/* Header (logo + nav) */}
-        <header
-          style={{
-            position: "sticky",
-            top: 0,
-            zIndex: 1000,
-            background: "#ffffff",
-            boxShadow: "0 2px 10px rgba(0,0,0,0.06)",
-          }}
-        >
-          <div
-            style={{
-              maxWidth: 1200,
-              margin: "0 auto",
-              padding: "14px 24px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-              {/* Replace /logo.png if your filename differs */}
-              <Image src="/logo.png" alt="Springle Robotics" width={44} height={44} />
-              <span style={{ fontWeight: 800, color: "#2E7D32", letterSpacing: 0.2, fontSize: 20 }}>
-                Springle Robotics
-              </span>
-            </div>
-
-            <nav style={{ display: "flex", gap: 18 }}>
-              <a href="#about" style={navLink}>About</a>
-              <a href="#services" style={navLink}>Services</a>
-              <a href="#contact" style={{ ...navLink, color: "#fff", background: "#F57C00", padding: "8px 12px", borderRadius: 8 }}>
-                Contact
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        {/* Put slider outside any centered/narrow container */}
+        {/* Full-width slider under the header */}
+        {/* The wrapper below ensures the slider spans edge-to-edge even if other content is centered */}
         <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <HeroSlider />
         </div>
 
-        {/* Intro blurb under slider */}
+        {/* Intro blurb */}
         <section style={{ maxWidth: 1000, margin: "32px auto", padding: "0 24px", textAlign: "center" }}>
           <h1 style={{ color: "#2E7D32", fontSize: 36, margin: "0 0 8px" }}>
             Smart Robots for Smarter Workplaces
           </h1>
-          <p style={{ color: "#444", margin: 0 }}>
+          <p style={{ color: "#444", margin: 0, lineHeight: 1.6 }}>
             We build autonomous service robots for cafeterias, warehouses, and hospitals — to move, deliver,
             and sanitize with precision and safety.
           </p>
@@ -74,8 +42,8 @@ export default function Home() {
         {/* About */}
         <section id="about" style={{ background: "#ffffff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={sectionTitle}>About Us</h2>
-            <p style={sectionText}>
+            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>About Us</h2>
+            <p style={{ color: "#444", margin: 0, maxWidth: 820, lineHeight: 1.6 }}>
               Springle Robotics designs practical, reliable service robots that handle repetitive tasks so your teams
               can focus on high-value work. Our platforms combine safe navigation, robust hardware, and simple
               workflows to deliver ROI quickly.
@@ -86,7 +54,7 @@ export default function Home() {
         {/* Services */}
         <section id="services" style={{ background: "#faf6ee", padding: "48px 24px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={sectionTitle}>Our Services</h2>
+            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>Our Services</h2>
 
             <div
               style={{
@@ -123,12 +91,12 @@ export default function Home() {
         {/* Contact CTA */}
         <section id="contact" style={{ background: "#ffffff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 1000, margin: "0 auto", textAlign: "center" }}>
-            <h2 style={sectionTitle}>Contact Us</h2>
-            <p style={sectionText}>
+            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>Contact Us</h2>
+            <p style={{ color: "#444", margin: 0, maxWidth: 780, lineHeight: 1.6 }}>
               Want to explore our robots for your facility? Get in touch and we’ll arrange a live demo.
             </p>
 
-            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 12 }}>
+            <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap", marginTop: 16 }}>
               <a
                 href="/contact"
                 style={{
@@ -163,7 +131,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Footer */}
+        {/* Simple footer */}
         <footer style={{ borderTop: "1px solid #e8e3da", color: "#6b7280", padding: 18, textAlign: "center" }}>
           © {new Date().getFullYear()} Springle Robotics. All rights reserved.
         </footer>
@@ -172,18 +140,7 @@ export default function Home() {
   );
 }
 
-/* --- tiny style helpers --- */
-const navLink = {
-  color: "#2E7D32",
-  textDecoration: "none",
-  padding: "6px 8px",
-  borderRadius: 6,
-  fontWeight: 700,
-};
-
-const sectionTitle = { color: "#2E7D32", margin: "0 0 6px", fontSize: 28 };
-const sectionText = { color: "#444", margin: 0, maxWidth: 820, lineHeight: 1.6 };
-
+/* ===== Tiny style helpers (same file to keep it simple) ===== */
 const card = {
   background: "#ffffff",
   border: "1px solid #ece6da",
