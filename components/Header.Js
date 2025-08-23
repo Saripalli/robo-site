@@ -33,12 +33,12 @@ export default function Header() {
             textDecoration: "none",
           }}
         >
-          {/* 👇 This looks for /public/logo.png in your project */}
+          {/* 👇 Preserve natural aspect ratio */}
           <Image
             src="/logo.png"
             alt="Springle Robotics Logo"
-            width={140}
-            height={40}
+            height={50}                // control height only
+            style={{ width: "auto" }}  // width adjusts automatically
             priority
           />
           <span style={{ fontWeight: 800, color: "#2E7D32" }}>
