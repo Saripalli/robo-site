@@ -40,16 +40,53 @@ export default function Home() {
         </section>
 
         {/* About */}
-        <section id="about" style={{ background: "#ffffff", padding: "48px 24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>About Us</h2>
-            <p style={{ color: "#444", margin: 0, maxWidth: 820, lineHeight: 1.6 }}>
-              Springle Robotics designs practical, reliable service robots that handle repetitive tasks so your teams
-              can focus on high-value work. Our platforms combine safe navigation, robust hardware, and simple
-              workflows to deliver ROI quickly.
-            </p>
-          </div>
-        </section>
+        <section id="about" style={{ background: "#ffffff", padding: "60px 24px" }}>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <h2 style={{ color: "#2E7D32", margin: "0 0 16px", fontSize: 32 }}>
+      About Us
+    </h2>
+
+    {/* Highlighted Vision Statement */}
+    <div style={{
+      background: "#f0fdf4",       // light green background
+      borderLeft: "6px solid #2E7D32",
+      borderRadius: "8px",
+      padding: "20px",
+      marginBottom: "24px"
+    }}>
+      <p style={{
+        margin: 0,
+        fontSize: "18px",
+        fontWeight: "600",
+        color: "#1b4332",
+        lineHeight: 1.6
+      }}>
+        At <strong>Springle Robotics</strong>, our vision is simple yet powerful: 
+        to serve people through technology. We believe robots should never replace 
+        human connection — instead, they should empower it. By taking care of 
+        repetitive and time-consuming tasks, our service robots allow people 
+        to focus on what truly matters: care, creativity, and meaningful interactions.
+      </p>
+    </div>
+
+    {/* Rest of About Us content */}
+    <p style={{ color: "#444", margin: "0 0 16px", maxWidth: 850, lineHeight: 1.6 }}>
+      Based in Sydney, Springle Robotics is proudly shaping the future of service 
+      innovation in Australia. From cafés and restaurants to aged care facilities, 
+      shopping centres, and community events, our robots are designed to support 
+      businesses and communities with reliability, efficiency, and heart.
+    </p>
+    <p style={{ color: "#444", margin: "0 0 16px", maxWidth: 850, lineHeight: 1.6 }}>
+      We partner with world-leading manufacturers and combine cutting-edge robotics 
+      with a human-centered approach, ensuring every solution we deliver is not just 
+      smart, but also practical and people-first.
+    </p>
+    <p style={{ color: "#444", margin: 0, maxWidth: 850, lineHeight: 1.6 }}>
+      Springle Robotics isn’t just about machines — it’s about building a future 
+      where technology uplifts lives, strengthens communities, and helps people shine.
+    </p>
+  </div>
+</section>
 
         {/* Services */}
         <section id="services" style={{ background: "#faf6ee", padding: "48px 24px" }}>
