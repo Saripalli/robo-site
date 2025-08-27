@@ -21,7 +21,6 @@ export default function Header() {
           padding: "0 24px",
         }}
       >
-        {/* Logo + brand */}
         <Link
           href="/"
           aria-label="Springle Robotics Home"
@@ -32,7 +31,6 @@ export default function Header() {
             textDecoration: "none",
           }}
         >
-          {/* Using plain <img> to avoid Next/Image requirements */}
           <img
             src="/logo.png"
             alt="Springle Robotics Logo"
@@ -43,12 +41,8 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Navigation links (all uniform now) */}
-        <nav style={{ display: "flex", gap: 16 }}>
-          <Link href="/products">Products</Link>
-          <a href="#about">About</a>
-          <Link href="/contact">Contact</Link>
-        </nav>
+        {/* (No top nav anymore; right-side menu will handle navigation) */}
+        <div />
       </div>
     </header>
   );
