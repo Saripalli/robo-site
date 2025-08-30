@@ -6,9 +6,8 @@ import "swiper/css";
 import Image from "next/image";
 
 const slides = [
-  "/demo1.jpg","/demo2.jpg","/demo3.jpg",
-  "/demo4.jpg","/demo5.jpg","/demo6.jpg",
-  "/demo7.jpg","/demo8.jpg",
+  "/demo1.png","/demo2.png","/demo3.png",
+  "/demo4.png","/demo5.png","/demo6.png",
 ];
 
 export default function HeroSlider() {
