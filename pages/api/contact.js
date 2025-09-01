@@ -1,5 +1,6 @@
 import sgMail from "@sendgrid/mail";
 
+// Load API key from Vercel environment variable
 sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 export default async function handler(req, res) {
@@ -15,8 +16,8 @@ export default async function handler(req, res) {
 
   try {
     const msg = {
-      to: "Info@springlerobotics.com.au", // ✅ your receiving address
-      from: "Info@springlerobotics.com.au", // ✅ must match your verified domain
+      to: "Info@springlerobotics.com.au", // ✅ your receiving email
+      from: "Info@springlerobotics.com.au", // ✅ must be verified in SendGrid
       subject: "New Consultation Request - Springle Robotics",
       text: `
         Name: ${name}
@@ -43,7 +44,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("SendGrid error:", error);
 
-    // Helpful error logging
     if (error.response) {
       console.error(error.response.body);
     }

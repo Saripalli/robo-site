@@ -7,7 +7,7 @@ export default function Header() {
     { href: "#industries", label: "Industries" },
     { href: "#consult", label: "Consultation" },
     { href: "#case-studies", label: "Case Studies" },
-    { href: "#contact", label: "Contact" },
+    { href: "/contact", label: "Contact" }, // ✅ goes to standalone page now
   ];
 
   return (
@@ -53,7 +53,7 @@ export default function Header() {
         {/* Horizontal nav */}
         <nav style={{ display: "flex", gap: 28, fontSize: 18 }}>
           {navItems.map((item) => (
-            <a
+            <Link
               key={item.href}
               href={item.href}
               style={{
@@ -80,7 +80,7 @@ export default function Header() {
                   transition: "width 0.3s ease",
                 }}
               />
-            </a>
+            </Link>
           ))}
         </nav>
       </div>

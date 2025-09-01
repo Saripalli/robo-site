@@ -32,7 +32,7 @@ export default function RightMenuLayout() {
 
   return (
     <>
-      {/* Hamburger */}
+      {/* Hamburger button */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -52,7 +52,7 @@ export default function RightMenuLayout() {
         {open ? <X size={22} /> : <Menu size={22} />}
       </button>
 
-      {/* Slide-out */}
+      {/* Slide-out menu */}
       {open && (
         <aside
           style={{
@@ -70,6 +70,7 @@ export default function RightMenuLayout() {
             overflowY: "auto",
           }}
         >
+          {/* Static links */}
           {[
             { href: "#top", label: "Home" },
             { href: "#about", label: "About Us" },
@@ -112,20 +113,42 @@ export default function RightMenuLayout() {
             <div style={{ paddingLeft: 16 }}>
               <a href="#robots-food" style={baseLink} {...hoverHandlers}>
                 Food Delivery & BOTS
-                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
+                <span
+                  className="underline"
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    bottom: 0,
+                    height: "2px",
+                    width: "0",
+                    backgroundColor: "#2E7D32",
+                    transition: "width 0.3s ease",
+                  }}
+                />
               </a>
               <a href="#robots-cleaning" style={baseLink} {...hoverHandlers}>
                 Commercial Cleaning BOTS
-                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
+                <span
+                  className="underline"
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    bottom: 0,
+                    height: "2px",
+                    width: "0",
+                    backgroundColor: "#2E7D32",
+                    transition: "width 0.3s ease",
+                  }}
+                />
               </a>
             </div>
           )}
 
+          {/* Remaining links */}
           {[
             { href: "#industries", label: "Industries" },
             { href: "#consult", label: "Book a consultation" },
             { href: "#case-studies", label: "Case Studies" },
-            { href: "#contact", label: "Contact Us" },
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
@@ -143,6 +166,23 @@ export default function RightMenuLayout() {
               />
             </a>
           ))}
+
+          {/* Contact goes to dedicated page */}
+          <a href="/contact" style={baseLink} {...hoverHandlers}>
+            Contact Us
+            <span
+              className="underline"
+              style={{
+                position: "absolute",
+                left: 0,
+                bottom: 0,
+                height: "2px",
+                width: "0",
+                backgroundColor: "#2E7D32",
+                transition: "width 0.3s ease",
+              }}
+            />
+          </a>
         </aside>
       )}
     </>
