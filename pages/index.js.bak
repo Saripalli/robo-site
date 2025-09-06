@@ -97,6 +97,35 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Food Delivery BOTS */}
+        <section id="robots-food" style={{ background: "#faf6ee", padding: "48px 24px" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>
+              Food Delivery & BOTS
+            </h2>
+            <ul style={{ color: "#444", lineHeight: 1.8, marginTop: 10, fontSize: "18px" }}>
+              <li>Kikato (Delivery & Promotion)</li>
+              <li>Simply delivery BOT</li>
+              <li>The Butler BOT (Closed delivery)</li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Commercial Cleaning BOTS */}
+        <section id="robots-cleaning" style={{ background: "#ffffff", padding: "48px 24px" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>
+              Commercial Cleaning BOTS
+            </h2>
+            <ul style={{ color: "#444", lineHeight: 1.8, marginTop: 10, fontSize: "18px" }}>
+              <li>Megabot — Spot Cleaner, Sweeper & Vacuum Robot (AI powered)</li>
+              <li>Superbot — Scrubber cleaning BOT (AI powered)</li>
+              <li>Cutebot — Everyday Maintenance Robots (vacuum only)</li>
+              <li>Microbot — Handheld scrubber & Dryer</li>
+            </ul>
+          </div>
+        </section>
+
         {/* Industries */}
         <section id="industries" style={{ background: "#faf6ee", padding: "48px 24px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>

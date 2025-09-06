@@ -1,10 +1,11 @@
 // components/RightMenuLayout.js
 "use client";
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function RightMenuLayout() {
   const [open, setOpen] = useState(false);
+  const [robotsOpen, setRobotsOpen] = useState(false);
 
   const baseLink = {
     display: "block",
@@ -74,7 +75,7 @@ export default function RightMenuLayout() {
           {[
             { href: "/#top", label: "Home" },
             { href: "/#about", label: "About Us" },
-            { href: "/catalog", label: "Our Robotic Solutions" }, // page link
+            { href: "/catalog", label: "Our Robotic Solutions" }, // new page link
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
@@ -92,6 +93,36 @@ export default function RightMenuLayout() {
               />
             </a>
           ))}
+
+          {/* Our Robots (expandable group) */}
+          <div
+            onClick={() => setRobotsOpen(!robotsOpen)}
+            style={{
+              ...baseLink,
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              cursor: "pointer",
+            }}
+          >
+            Our Robots
+            <ChevronDown
+              size={16}
+              style={{ transform: robotsOpen ? "rotate(180deg)" : "rotate(0deg)" }}
+            />
+          </div>
+          {robotsOpen && (
+            <div style={{ paddingLeft: 16 }}>
+              <a href="/#robots-food" style={baseLink} {...hoverHandlers}>
+                Food Delivery & BOTS
+                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
+              </a>
+              <a href="/#robots-cleaning" style={baseLink} {...hoverHandlers}>
+                Commercial Cleaning BOTS
+                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
+              </a>
+            </div>
+          )}
 
           {/* Remaining links */}
           {[
