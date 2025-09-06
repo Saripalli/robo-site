@@ -226,7 +226,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
         <footer
           style={{
             borderTop: "1px solid #e8e3da",
