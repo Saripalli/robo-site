@@ -1,3 +1,4 @@
+// components/Header.js
 import Link from "next/link";
 
 export default function Header() {
@@ -5,9 +6,9 @@ export default function Header() {
     { href: "/#about", label: "About" },
     { href: "/#robots-food", label: "Our Robots" },
     { href: "/#industries", label: "Industries" },
+    { href: "/catalog", label: "Product Catalogue" }, // <-- replaced "Case Studies"
     { href: "/#consult", label: "Consultation" },
-    { href: "/#case-studies", label: "Case Studies" },
-    { href: "/#contact", label: "Contact" }, // now points to contact anchor on homepage
+    { href: "/#contact", label: "Contact" }, // points to homepage anchor
   ];
 
   return (

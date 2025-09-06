@@ -1,3 +1,4 @@
+// components/RightMenuLayout.js
 "use client";
 import { useState } from "react";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -74,6 +75,7 @@ export default function RightMenuLayout() {
           {[
             { href: "/#top", label: "Home" },
             { href: "/#about", label: "About Us" },
+            { href: "/catalog", label: "Product Catalogue" }, // new page link
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
@@ -92,7 +94,7 @@ export default function RightMenuLayout() {
             </a>
           ))}
 
-          {/* Our Robots */}
+          {/* Our Robots (expandable group) */}
           <div
             onClick={() => setRobotsOpen(!robotsOpen)}
             style={{
