@@ -113,33 +113,11 @@ export default function RightMenuLayout() {
             <div style={{ paddingLeft: 16 }}>
               <a href="/#robots-food" style={baseLink} {...hoverHandlers}>
                 Food Delivery & BOTS
-                <span
-                  className="underline"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    height: "2px",
-                    width: "0",
-                    backgroundColor: "#2E7D32",
-                    transition: "width 0.3s ease",
-                  }}
-                />
+                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
               </a>
               <a href="/#robots-cleaning" style={baseLink} {...hoverHandlers}>
                 Commercial Cleaning BOTS
-                <span
-                  className="underline"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    height: "2px",
-                    width: "0",
-                    backgroundColor: "#2E7D32",
-                    transition: "width 0.3s ease",
-                  }}
-                />
+                <span className="underline" style={{ position: "absolute", left: 0, bottom: 0, height: "2px", width: "0", backgroundColor: "#2E7D32", transition: "width 0.3s ease" }} />
               </a>
             </div>
           )}
@@ -167,8 +145,8 @@ export default function RightMenuLayout() {
             </a>
           ))}
 
-          {/* Contact goes to dedicated page */}
-          <a href="/contact" style={baseLink} {...hoverHandlers}>
+          {/* Contact goes to homepage contact anchor */}
+          <a href="/#contact" style={baseLink} {...hoverHandlers}>
             Contact Us
             <span
               className="underline"

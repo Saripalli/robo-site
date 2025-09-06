@@ -7,7 +7,7 @@ export default function Header() {
     { href: "/#industries", label: "Industries" },
     { href: "/#consult", label: "Consultation" },
     { href: "/#case-studies", label: "Case Studies" },
-    { href: "/contact", label: "Contact" }, // ✅ goes to standalone page now
+    { href: "/#contact", label: "Contact" }, // now points to contact anchor on homepage
   ];
 
   return (
