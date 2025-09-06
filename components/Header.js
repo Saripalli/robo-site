@@ -2,11 +2,11 @@ import Link from "next/link";
 
 export default function Header() {
   const navItems = [
-    { href: "#about", label: "About" },
-    { href: "#robots-food", label: "Our Robots" },
-    { href: "#industries", label: "Industries" },
-    { href: "#consult", label: "Consultation" },
-    { href: "#case-studies", label: "Case Studies" },
+    { href: "/#about", label: "About" },
+    { href: "/#robots-food", label: "Our Robots" },
+    { href: "/#industries", label: "Industries" },
+    { href: "/#consult", label: "Consultation" },
+    { href: "/#case-studies", label: "Case Studies" },
     { href: "/contact", label: "Contact" }, // ✅ goes to standalone page now
   ];
 
