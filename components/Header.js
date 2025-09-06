@@ -6,7 +6,7 @@ export default function Header() {
     { href: "/#about", label: "About" },
     { href: "/#robots-food", label: "Our Robots" },
     { href: "/#industries", label: "Industries" },
-    { href: "/catalog", label: "Product Catalogue" }, // <-- replaced "Case Studies"
+    { href: "/catalog", label: "Our Robotic Solutions" }, // <-- replaced "Case Studies"
     { href: "/#consult", label: "Consultation" },
     { href: "/#contact", label: "Contact" }, // points to homepage anchor
   ];

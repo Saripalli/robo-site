@@ -75,7 +75,7 @@ export default function RightMenuLayout() {
           {[
             { href: "/#top", label: "Home" },
             { href: "/#about", label: "About Us" },
-            { href: "/catalog", label: "Product Catalogue" }, // new page link
+            { href: "/catalog", label: "Our Robotic Solutions" }, // new page link
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
