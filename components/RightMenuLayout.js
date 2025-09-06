@@ -74,7 +74,7 @@ export default function RightMenuLayout() {
           {[
             { href: "/#top", label: "Home" },
             { href: "/#about", label: "About Us" },
-            { href: "/catalog", label: "Our Robotic Solutions" }, // page link
+            { href: "/catalog", label: "Our Robotic Solutions" },
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
@@ -93,11 +93,10 @@ export default function RightMenuLayout() {
             </a>
           ))}
 
-          {/* Remaining links */}
+          {/* Remaining links (Case Studies removed) */}
           {[
             { href: "/#industries", label: "Industries" },
             { href: "/#consult", label: "Book a consultation" },
-            { href: "/#case-studies", label: "Case Studies" },
           ].map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
@@ -116,7 +115,7 @@ export default function RightMenuLayout() {
             </a>
           ))}
 
-          {/* Contact goes to homepage contact anchor */}
+          {/* Contact */}
           <a href="/#contact" style={baseLink} {...hoverHandlers}>
             Contact Us
             <span

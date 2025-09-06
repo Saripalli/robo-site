@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import RightMenuLayout from "../components/RightMenuLayout";
 import ProductCatalog from "../components/ProductCatalog";
+import Breadcrumb from "../components/Breadcrumb";
 
 export default function CatalogPage() {
   const [showButton, setShowButton] = useState(false);
@@ -19,6 +20,11 @@ export default function CatalogPage() {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const breadcrumbItems = [
+    { href: "/", label: "Home" },
+    { href: "/catalog", label: "Our Robotic Solutions" },
+  ];
 
   return (
     <>
@@ -42,14 +48,15 @@ export default function CatalogPage() {
         <Header />
         <RightMenuLayout />
 
-        <main style={{ padding: "32px 20px" }}>
+        <main style={{ padding: "28px 20px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <Breadcrumb items={breadcrumbItems} />
+
             <h1 style={{ color: "#2E7D32", fontSize: 36, marginBottom: 8 }}>
               Our Robotic Solutions
             </h1>
             <p style={{ color: "#444", marginBottom: 20, fontSize: 18 }}>
-              Explore each of our product platforms and choose the right robot for your
-              business needs.
+              Explore each of our product platforms and choose the right robot for your business needs.
             </p>
 
             <ProductCatalog />
