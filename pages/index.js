@@ -3,7 +3,6 @@ import Head from "next/head";
 import Header from "../components/Header";
 import RightMenuLayout from "../components/RightMenuLayout";
 import HeroSlider from "../components/HeroSlider";
-// ProductCatalog removed from homepage per your request
 
 export default function Home() {
   const para = {
@@ -176,16 +175,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Case Studies (kept on homepage as info placeholder or remove if you want) */}
-        <section id="case-studies" style={{ background: "#faf6ee", padding: "48px 24px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={{ color: "#2E7D32", margin: "0 0 6px", fontSize: 28 }}>
-              Case Studies
-            </h2>
-            <p style={{ color: "#444", marginTop: 8, fontSize: "18px" }}>Coming soon</p>
-          </div>
-        </section>
-
         {/* Contact Us */}
         <section id="contact" style={{ background: "#ffffff", padding: "48px 24px" }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -199,6 +188,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <footer
           style={{
             borderTop: "1px solid #e8e3da",

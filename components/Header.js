@@ -8,7 +8,7 @@ export default function Header() {
     { href: "/#industries", label: "Industries" },
     { href: "/catalog", label: "Our Robotic Solutions" },
     { href: "/#consult", label: "Consultation" },
-    { href: "/#contact", label: "Contact" }, // now points to contact anchor on homepage
+    { href: "/#contact", label: "Contact Us" }, // now points to contact anchor on homepage
   ];
 
   return (
