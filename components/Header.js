@@ -3,12 +3,11 @@ import Link from "next/link";
 
 export default function Header() {
   const navItems = [
-    { href: "/#about", label: "About" },
-    // { href: "/#robots-food", label: "Our Robots" },  <-- removed
+    { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
-    { href: "/catalog", label: "Our Robotic Solutions" },
+    { href: "/#solutions", label: "Our Robotic Solutions" }, // new anchor
     { href: "/#consult", label: "Consultation" },
-    { href: "/#contact", label: "Contact Us" }, // now points to contact anchor on homepage
+    { href: "/#contact", label: "Contact Us" },
   ];
 
   return (
@@ -51,7 +50,7 @@ export default function Header() {
           </span>
         </Link>
 
-        {/* Horizontal nav */}
+        {/* Nav */}
         <nav style={{ display: "flex", gap: 28, fontSize: 18 }}>
           {navItems.map((item) => (
             <Link

@@ -30,9 +30,16 @@ export default function RightMenuLayout() {
     },
   };
 
+  const menuItems = [
+    { href: "/#about", label: "About Us" },
+    { href: "/#industries", label: "Industries" },
+    { href: "/#solutions", label: "Our Robotic Solutions" },
+    { href: "/#consult", label: "Consultation" },
+    { href: "/#contact", label: "Contact Us" },
+  ];
+
   return (
     <>
-      {/* Hamburger button */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -52,7 +59,6 @@ export default function RightMenuLayout() {
         {open ? <X size={22} /> : <Menu size={22} />}
       </button>
 
-      {/* Slide-out menu */}
       {open && (
         <aside
           style={{
@@ -70,12 +76,7 @@ export default function RightMenuLayout() {
             overflowY: "auto",
           }}
         >
-          {/* Static links */}
-          {[
-            { href: "/#top", label: "Home" },
-            { href: "/#about", label: "About Us" },
-            { href: "/catalog", label: "Our Robotic Solutions" },
-          ].map((item) => (
+          {menuItems.map((item) => (
             <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
               {item.label}
               <span
@@ -92,45 +93,6 @@ export default function RightMenuLayout() {
               />
             </a>
           ))}
-
-          {/* Remaining links (Case Studies removed) */}
-          {[
-            { href: "/#industries", label: "Industries" },
-            { href: "/#consult", label: "Book a consultation" },
-          ].map((item) => (
-            <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
-              {item.label}
-              <span
-                className="underline"
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  bottom: 0,
-                  height: "2px",
-                  width: "0",
-                  backgroundColor: "#2E7D32",
-                  transition: "width 0.3s ease",
-                }}
-              />
-            </a>
-          ))}
-
-          {/* Contact */}
-          <a href="/#contact" style={baseLink} {...hoverHandlers}>
-            Contact Us
-            <span
-              className="underline"
-              style={{
-                position: "absolute",
-                left: 0,
-                bottom: 0,
-                height: "2px",
-                width: "0",
-                backgroundColor: "#2E7D32",
-                transition: "width 0.3s ease",
-              }}
-            />
-          </a>
         </aside>
       )}
     </>
