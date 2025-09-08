@@ -320,6 +320,75 @@ export default function Home() {
           `}</style>
         </section>
 
+{/* Quick FAQs */}
+<section
+  id="quick-faqs"
+  style={{
+    background: "#faf6ee",
+    padding: "36px 24px",
+    scrollMarginTop: 92,
+  }}
+>
+  <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+    <h2 style={{ color: "#2E7D32", margin: "0 0 12px", fontSize: 28 }}>
+      Quick FAQs
+    </h2>
+
+    <div style={{ background: "#fff", padding: 18, borderRadius: 10, border: "1px solid #ece6da" }}>
+      <ol style={{ margin: 0, paddingLeft: 18, color: "#444", lineHeight: 1.7 }}>
+        <li style={{ marginBottom: 10 }}>
+          <strong>Do I need to buy the robots?</strong><br />
+          No purchase needed — we offer flexible leasing with no upfront costs.
+        </li>
+
+        <li style={{ marginBottom: 10 }}>
+          <strong>Is it hard for staff to use?</strong><br />
+          Not at all. Setup and training are simple — your team can be ready in under an hour.
+        </li>
+
+        <li style={{ marginBottom: 10 }}>
+          <strong>How do robots help my business?</strong><br />
+          They speed up service, reduce waiting times, boost efficiency, and create a wow factor that
+          keeps customers coming back.
+        </li>
+
+        <li style={{ marginBottom: 10 }}>
+          <strong>Can I try before committing?</strong><br />
+          Yes! Get a free 2-week pilot. Schedule a consultation with our expert team.
+        </li>
+
+        <li style={{ marginBottom: 10 }}>
+          <strong>What types of robots do you have?</strong><br />
+          We offer:
+          <ul style={{ marginTop: 8 }}>
+            <li>Simple Delivery Bot</li>
+            <li>Kikato — Delivery + Promotional Bot</li>
+            <li>Butler Bot (closed) for hotels</li>
+          </ul>
+        </li>
+      </ol>
+
+      <div style={{ marginTop: 16 }}>
+        <a
+          href="/faqs"
+          style={{
+            color: "#fff",
+            background: "#2E7D32",
+            padding: "10px 14px",
+            borderRadius: 8,
+            textDecoration: "none",
+            fontWeight: 700,
+            display: "inline-block",
+          }}
+        >
+          more questions...
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
         {/* Book a consultation */}
         <section id="consult" style={{ background: "#ffffff", padding: "48px 24px", scrollMarginTop: 92 }}>
           <div style={{ maxWidth: 1100, margin: "0 auto" }}>

@@ -1,6 +1,7 @@
 // components/RightMenuLayout.js
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
 export default function RightMenuLayout() {
@@ -34,12 +35,14 @@ export default function RightMenuLayout() {
     { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
     { href: "/#solutions", label: "Our Robotic Solutions" },
+    { href: "/#quick-faqs", label: "FAQs" }, // now points to quick FAQs on home
     { href: "/#consult", label: "Consultation" },
     { href: "/#contact", label: "Contact Us" },
   ];
 
   return (
     <>
+      {/* Hamburger button */}
       <button
         onClick={() => setOpen(!open)}
         style={{
@@ -59,13 +62,14 @@ export default function RightMenuLayout() {
         {open ? <X size={22} /> : <Menu size={22} />}
       </button>
 
+      {/* Slide-out menu */}
       {open && (
         <aside
           style={{
             position: "fixed",
             right: 16,
             top: 120,
-            width: 260,
+            width: 280,
             background: "#fff",
             border: "1px solid #e5e7eb",
             borderRadius: 12,
@@ -77,21 +81,23 @@ export default function RightMenuLayout() {
           }}
         >
           {menuItems.map((item) => (
-            <a key={item.href} href={item.href} style={baseLink} {...hoverHandlers}>
-              {item.label}
-              <span
-                className="underline"
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  bottom: 0,
-                  height: "2px",
-                  width: "0",
-                  backgroundColor: "#2E7D32",
-                  transition: "width 0.3s ease",
-                }}
-              />
-            </a>
+            <Link key={item.href} href={item.href} legacyBehavior>
+              <a style={baseLink} {...hoverHandlers} onClick={() => setOpen(false)}>
+                {item.label}
+                <span
+                  className="underline"
+                  style={{
+                    position: "absolute",
+                    left: 0,
+                    bottom: 0,
+                    height: "2px",
+                    width: "0",
+                    backgroundColor: "#2E7D32",
+                    transition: "width 0.3s ease",
+                  }}
+                />
+              </a>
+            </Link>
           ))}
         </aside>
       )}

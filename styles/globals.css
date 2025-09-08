@@ -40,3 +40,10 @@ a {
     color-scheme: dark;
   }
 }
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 92px; /* matches header height */
+}
