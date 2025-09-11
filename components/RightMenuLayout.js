@@ -37,6 +37,7 @@ export default function RightMenuLayout() {
     { href: "/#solutions", label: "Our Robotic Solutions" },
     { href: "/#quick-faqs", label: "FAQs" }, // now points to quick FAQs on home
     { href: "/#consult", label: "Consultation" },
+    { href: "/case-studies", label: "Case Studies" }, // <-- ADDED
     { href: "/#contact", label: "Contact Us" },
   ];
 
@@ -81,22 +82,27 @@ export default function RightMenuLayout() {
           }}
         >
           {menuItems.map((item) => (
-            <Link key={item.href} href={item.href} legacyBehavior>
-              <a style={baseLink} {...hoverHandlers} onClick={() => setOpen(false)}>
-                {item.label}
-                <span
-                  className="underline"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    height: "2px",
-                    width: "0",
-                    backgroundColor: "#2E7D32",
-                    transition: "width 0.3s ease",
-                  }}
-                />
-              </a>
+            <Link
+              key={item.href}
+              href={item.href}
+              style={baseLink}
+              onClick={() => setOpen(false)}
+              {...hoverHandlers}
+            >
+              {/* Link renders <a> automatically in Next.js — do NOT add a nested <a> */}
+              {item.label}
+              <span
+                className="underline"
+                style={{
+                  position: "absolute",
+                  left: 0,
+                  bottom: 0,
+                  height: "2px",
+                  width: "0",
+                  backgroundColor: "#2E7D32",
+                  transition: "width 0.3s ease",
+                }}
+              />
             </Link>
           ))}
         </aside>

@@ -9,8 +9,9 @@ export default function Header() {
     { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
     { href: "/#solutions", label: "Our Robotic Solutions" },
-    { href: "/#quick-faqs", label: "FAQs" }, // now points to quick FAQs on home
+    { href: "/#quick-faqs", label: "FAQs" },
     { href: "/#consult", label: "Consultation" },
+    { href: "/#case-studies", label: "Case Studies" },
     { href: "/#contact", label: "Contact Us" },
   ];
 
@@ -57,54 +58,53 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav style={{ display: "flex", gap: 28, fontSize: 18, alignItems: "center" }}>
-          <div className="desktop-links" style={{ display: "none", gap: 28 }}>
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
+        <nav className="desktop-nav">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              style={{
+                position: "relative",
+                textDecoration: "none",
+                color: "#1f2937",
+                fontWeight: 500,
+                padding: "4px 0",
+                transition: "color 0.3s ease",
+                whiteSpace: "nowrap", // prevents wrapping
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#2E7D32")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#1f2937")}
+            >
+              {item.label}
+              <span
+                className="underline"
                 style={{
-                  position: "relative",
-                  textDecoration: "none",
-                  color: "#1f2937",
-                  fontWeight: 500,
-                  padding: "4px 0",
-                  transition: "color 0.3s ease",
+                  position: "absolute",
+                  left: 0,
+                  bottom: 0,
+                  height: "2px",
+                  width: "0",
+                  backgroundColor: "#2E7D32",
+                  transition: "width 0.3s ease",
                 }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#2E7D32")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#1f2937")}
-              >
-                {item.label}
-                <span
-                  className="underline"
-                  style={{
-                    position: "absolute",
-                    left: 0,
-                    bottom: 0,
-                    height: "2px",
-                    width: "0",
-                    backgroundColor: "#2E7D32",
-                    transition: "width 0.3s ease",
-                  }}
-                />
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile toggle */}
-          <button
-            onClick={() => setOpen((s) => !s)}
-            aria-label="Toggle menu"
-            style={{
-              background: "transparent",
-              border: "1px solid #ddd",
-              padding: "6px 8px",
-              cursor: "pointer",
-            }}
-          >
-            ☰
-          </button>
+              />
+            </Link>
+          ))}
         </nav>
+
+        {/* Mobile toggle */}
+        <button
+          onClick={() => setOpen((s) => !s)}
+          aria-label="Toggle menu"
+          style={{
+            background: "transparent",
+            border: "1px solid #ddd",
+            padding: "6px 8px",
+            cursor: "pointer",
+          }}
+        >
+          ☰
+        </button>
       </div>
 
       {/* Mobile dropdown */}
@@ -135,8 +135,14 @@ export default function Header() {
       )}
 
       <style jsx>{`
+        .desktop-nav {
+          display: none;
+          gap: 18px; /* reduced gap */
+          font-size: 18px;
+        }
+
         @media (min-width: 880px) {
-          .desktop-links {
+          .desktop-nav {
             display: flex !important;
             align-items: center;
           }
@@ -144,6 +150,14 @@ export default function Header() {
             display: none;
           }
         }
+
+        @media (max-width: 1100px) {
+          .desktop-nav {
+            gap: 14px;
+            font-size: 16px; /* shrink slightly for medium screens */
+          }
+        }
+
         a {
           color: inherit;
           text-decoration: none;
