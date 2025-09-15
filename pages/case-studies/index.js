@@ -1,5 +1,6 @@
 // pages/case-studies/index.js
 import Head from "next/head";
+import Link from "next/link";
 import Header from "../../components/Header";
 import RightMenuLayout from "../../components/RightMenuLayout";
 
@@ -9,18 +10,21 @@ const CASES = [
     title: "Kikato in a CBD Coffee Lounge",
     summary: "One-month pilot showing efficiency, customer approval, and sales growth.",
     thumb: "/case-studies/kikato-thumb.jpg",
+    href: "/case-studies/kikato-cafe",
   },
   {
     id: "robot-ready",
     title: "Getting a Restaurant “Robot-Ready”",
     summary: "Smart layout tweaks helped Kikato integrate smoothly in a busy venue.",
     thumb: "/case-studies/robotready-thumb.jpg",
+    href: "/case-studies/robot-ready",
   },
   {
     id: "slope",
     title: "Navigating Slopes with Kikato",
     summary: "A venue adapted layout to handle a tricky 11-degree incline.",
     thumb: "/case-studies/slope-thumb.jpg",
+    href: "/case-studies/slope",
   },
 ];
 
@@ -29,6 +33,7 @@ export default function CaseStudiesIndex() {
     <>
       <Head>
         <title>Case Studies — Springle Robotics</title>
+        <meta name="description" content="Real deployments and results — case studies from Springle Robotics." />
       </Head>
 
       <Header />
@@ -41,28 +46,67 @@ export default function CaseStudiesIndex() {
             Real deployments showing how Kikato improved service, staff wellbeing, and revenue.
           </p>
 
-          <div style={{ display: "grid", gap: 20, gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))" }}>
+          <div
+            style={{
+              display: "grid",
+              gap: 20,
+              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+            }}
+          >
             {CASES.map((c) => (
+              <Link key={c.id} href={c.href} legacyBehavior>
+                <a
+                  style={{
+                    background: "#fff",
+                    border: "1px solid #ece6da",
+                    borderRadius: 10,
+                    textDecoration: "none",
+                    color: "inherit",
+                    overflow: "hidden",
+                    boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
+                    transition: "transform 0.18s ease",
+                    display: "block",
+                  }}
+                >
+                  <img
+                    src={c.thumb}
+                    alt={c.title}
+                    style={{
+                      width: "100%",
+                      height: 130,
+                      objectFit: "contain",
+                      background: "#fff",
+                      padding: 10,
+                      display: "block",
+                    }}
+                  />
+
+                  <div style={{ padding: 14 }}>
+                    <h3 style={{ margin: "0 0 8px", color: "#2E7D32" }}>{c.title}</h3>
+                    <p style={{ margin: 0, color: "#444" }}>{c.summary}</p>
+                  </div>
+                </a>
+              </Link>
+            ))}
+          </div>
+
+          <div style={{ marginTop: 28, textAlign: "center" }}>
+            <Link href="/" legacyBehavior>
               <a
-                key={c.id}
-                href={`/case-studies/${c.id}`}
                 style={{
+                  display: "inline-block",
+                  padding: "10px 16px",
                   background: "#fff",
-                  border: "1px solid #ece6da",
-                  borderRadius: 10,
+                  color: "#2E7D32",
+                  border: "1px solid #e5e7eb",
+                  borderRadius: 8,
                   textDecoration: "none",
-                  color: "inherit",
-                  overflow: "hidden",
-                  boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
+                  fontWeight: 700,
                 }}
               >
-                <img src={c.thumb} alt={c.title} style={{ width: "100%", height: 180, objectFit: "cover" }} />
-                <div style={{ padding: 14 }}>
-                  <h3 style={{ margin: "0 0 8px", color: "#2E7D32" }}>{c.title}</h3>
-                  <p style={{ margin: 0, color: "#444" }}>{c.summary}</p>
-                </div>
+                ← Back to home
               </a>
-            ))}
+            </Link>
           </div>
         </div>
       </main>

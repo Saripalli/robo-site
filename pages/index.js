@@ -62,12 +62,14 @@ export default function Home() {
     transition: "transform 0.2s ease",
   };
 
-  const thumbStyle = {
-    width: "100%",
-    height: 180,
-    objectFit: "cover",
-    display: "block",
-  };
+ const thumbStyle = {
+  width: "100%",
+  height: 130,        // smaller than before
+  objectFit: "contain", // keeps full logo visible
+  background: "#fff",   // clean background
+  padding: 10,          // spacing around the logo
+  display: "block",
+};
 
   return (
     <>
