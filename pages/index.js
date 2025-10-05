@@ -260,45 +260,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Quick FAQs */}
-        <section
-          id="quick-faqs"
-          style={{ background: "#faf6ee", padding: "36px 24px", scrollMarginTop: 92 }}
-        >
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={{ color: "#2E7D32", marginBottom: 12, fontSize: 28 }}>
-              Quick FAQs
-            </h2>
-            <ol style={{ margin: 0, paddingLeft: 18, color: "#444", lineHeight: 1.7 }}>
-              <li style={{ marginBottom: 10 }}>
-                <strong>Do I need to buy the robots?</strong> No, we offer flexible leasing.
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <strong>Is it hard for staff to use?</strong> Setup and training are simple —
-                ready in under an hour.
-              </li>
-              <li style={{ marginBottom: 10 }}>
-                <strong>Can I try before committing?</strong> Yes — free 2-week pilot available.
-              </li>
-            </ol>
-            <div style={{ marginTop: 16 }}>
-              <a
-                href="/faqs"
-                style={{
-                  color: "#fff",
-                  background: "#2E7D32",
-                  padding: "10px 14px",
-                  borderRadius: 8,
-                  textDecoration: "none",
-                  fontWeight: 700,
-                }}
-              >
-                more questions...
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* Consultation */}
         <section
           id="consult"
@@ -388,6 +349,47 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+
+        {/* Quick FAQs */}
+        <section
+          id="quick-faqs"
+          style={{ background: "#faf6ee", padding: "36px 24px", scrollMarginTop: 92 }}
+        >
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <h2 style={{ color: "#2E7D32", marginBottom: 12, fontSize: 28 }}>
+              Quick FAQs
+            </h2>
+            <ol style={{ margin: 0, paddingLeft: 18, color: "#444", lineHeight: 1.7 }}>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Do I need to buy the robots?</strong> No, we offer flexible leasing.
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Is it hard for staff to use?</strong> Setup and training are simple —
+                ready in under an hour.
+              </li>
+              <li style={{ marginBottom: 10 }}>
+                <strong>Can I try before committing?</strong> Yes — free 2-week pilot available.
+              </li>
+            </ol>
+            <div style={{ marginTop: 16 }}>
+              <a
+                href="/faqs"
+                style={{
+                  color: "#fff",
+                  background: "#2E7D32",
+                  padding: "10px 14px",
+                  borderRadius: 8,
+                  textDecoration: "none",
+                  fontWeight: 700,
+                }}
+              >
+                more questions...
+              </a>
+            </div>
+          </div>
+        </section>
+
 
         <footer
           style={{

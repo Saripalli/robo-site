@@ -9,11 +9,90 @@ export default function Header() {
     { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
     { href: "/#solutions", label: "Our Robotic Solutions" },
-    { href: "/#quick-faqs", label: "FAQs" },
     { href: "/#consult", label: "Consultation" },
     { href: "/#case-studies", label: "Case Studies" },
+    { href: "/press-release.pdf", label: "Press", external: true }, // updated PDF link
     { href: "/#contact", label: "Contact Us" },
   ];
+
+  const renderNavItem = (item, isMobile = false) => {
+    const baseStyle = isMobile
+      ? {
+          color: "#1f2937",
+          textDecoration: "none",
+          fontSize: 16,
+        }
+      : {
+          position: "relative",
+          textDecoration: "none",
+          color: "#1f2937",
+          fontWeight: 500,
+          padding: "4px 0",
+          transition: "color 0.3s ease",
+          whiteSpace: "nowrap",
+        };
+
+    const hoverHandlers = !isMobile
+      ? {
+          onMouseEnter: (e) => (e.currentTarget.style.color = "#2E7D32"),
+          onMouseLeave: (e) => (e.currentTarget.style.color = "#1f2937"),
+        }
+      : {};
+
+    if (item.external) {
+      return (
+        <a
+          key={item.href}
+          href={item.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={baseStyle}
+          {...hoverHandlers}
+          onClick={() => isMobile && setOpen(false)}
+        >
+          {item.label}
+          {!isMobile && (
+            <span
+              className="underline"
+              style={{
+                position: "absolute",
+                left: 0,
+                bottom: 0,
+                height: "2px",
+                width: "0",
+                backgroundColor: "#2E7D32",
+                transition: "width 0.3s ease",
+              }}
+            />
+          )}
+        </a>
+      );
+    } else {
+      return isMobile ? (
+        <Link key={item.href} href={item.href} legacyBehavior>
+          <a onClick={() => setOpen(false)} style={baseStyle}>
+            {item.label}
+          </a>
+        </Link>
+      ) : (
+        <Link key={item.href} href={item.href} style={baseStyle} {...hoverHandlers}>
+          {item.label}
+          <span
+            className="underline"
+            style={{
+              position: "absolute",
+              left: 0,
+              bottom: 0,
+              height: "2px",
+              width: "0",
+              backgroundColor: "#2E7D32",
+              transition: "width 0.3s ease",
+            }}
+          />
+        </Link>
+      );
+    }
+  };
 
   return (
     <header
@@ -59,37 +138,7 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="desktop-nav">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              style={{
-                position: "relative",
-                textDecoration: "none",
-                color: "#1f2937",
-                fontWeight: 500,
-                padding: "4px 0",
-                transition: "color 0.3s ease",
-                whiteSpace: "nowrap", // prevents wrapping
-              }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "#2E7D32")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "#1f2937")}
-            >
-              {item.label}
-              <span
-                className="underline"
-                style={{
-                  position: "absolute",
-                  left: 0,
-                  bottom: 0,
-                  height: "2px",
-                  width: "0",
-                  backgroundColor: "#2E7D32",
-                  transition: "width 0.3s ease",
-                }}
-              />
-            </Link>
-          ))}
+          {navItems.map((item) => renderNavItem(item))}
         </nav>
 
         {/* Mobile toggle */}
@@ -116,20 +165,7 @@ export default function Header() {
           }}
         >
           <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} legacyBehavior>
-                <a
-                  onClick={() => setOpen(false)}
-                  style={{
-                    color: "#1f2937",
-                    textDecoration: "none",
-                    fontSize: 16,
-                  }}
-                >
-                  {item.label}
-                </a>
-              </Link>
-            ))}
+            {navItems.map((item) => renderNavItem(item, true))}
           </div>
         </div>
       )}
@@ -137,7 +173,7 @@ export default function Header() {
       <style jsx>{`
         .desktop-nav {
           display: none;
-          gap: 18px; /* reduced gap */
+          gap: 18px;
           font-size: 18px;
         }
 
@@ -154,7 +190,7 @@ export default function Header() {
         @media (max-width: 1100px) {
           .desktop-nav {
             gap: 14px;
-            font-size: 16px; /* shrink slightly for medium screens */
+            font-size: 16px;
           }
         }
 
