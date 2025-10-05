@@ -26,6 +26,14 @@ const CASES = [
     thumb: "/case-studies/slope-thumb.jpg",
     href: "/case-studies/slope",
   },
+  // Added this new code on 5th Oct 2025
+  {
+    id: "mall-marketing",
+    title: "Springle Robotics – Mall Marketing Initiative",
+    summary: "How Springle robots can solve the Challenge of Traditional Mall Marketing",
+    thumb: "/case-studies/mall-marketing-thumb.jpg", // create a small thumbnail image for the new case
+    href: "/case-studies/mallmarket",
+  },
 ];
 
 export default function CaseStudiesIndex() {
