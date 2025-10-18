@@ -26,13 +26,19 @@ const CASES = [
     thumb: "/case-studies/slope-thumb.jpg",
     href: "/case-studies/slope",
   },
-  // Added this new code on 5th Oct 2025
   {
     id: "mall-marketing",
-    title: "Springle Robotics – Mall Marketing Initiative",
-    summary: "How Springle robots can solve the Challenge of Traditional Mall Marketing",
-    thumb: "/case-studies/mall-marketing-thumb.jpg", // create a small thumbnail image for the new case
-    href: "/case-studies/mallmarket",
+    title: "Mall Marketing Activation",
+    summary: "How Springle Robotics helped improve engagement in a mall setting.",
+    thumb: "/case-studies/mall-marketing-thumb.jpg",
+    href: "/case-studies/mall-marketing",
+  },
+  {
+    id: "hosp",
+    title: "Robotics in Hospitality",
+    summary: "How Springle robots enhance efficiency in hospitality environments.",
+    thumb: "/case-studies/hosp.jpg",
+    href: "/case-studies/hosp",
   },
 ];
 
@@ -41,24 +47,36 @@ export default function CaseStudiesIndex() {
     <>
       <Head>
         <title>Case Studies — Springle Robotics</title>
-        <meta name="description" content="Real deployments and results — case studies from Springle Robotics." />
+        <meta
+          name="description"
+          content="See real-world examples of how Springle Robotics solutions improve service and efficiency across industries."
+        />
       </Head>
 
       <Header />
       <RightMenuLayout />
 
-      <main style={{ padding: "36px 20px", background: "#fdf8f3", minHeight: "80vh" }}>
+      <main
+        style={{
+          padding: "36px 20px",
+          background: "#fdf8f3",
+          minHeight: "80vh",
+        }}
+      >
         <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-          <h1 style={{ color: "#2E7D32", fontSize: 32, marginBottom: 12 }}>Case Studies</h1>
+          <h1 style={{ color: "#2E7D32", fontSize: 32, marginBottom: 12 }}>
+            Case Studies
+          </h1>
           <p style={{ color: "#444", marginBottom: 20 }}>
-            Real deployments showing how Kikato improved service, staff wellbeing, and revenue.
+            Explore how Springle Robotics has improved productivity and customer
+            experience across various industries.
           </p>
 
           <div
             style={{
               display: "grid",
               gap: 20,
-              gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+              gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
             }}
           >
             {CASES.map((c) => (
@@ -71,9 +89,18 @@ export default function CaseStudiesIndex() {
                     textDecoration: "none",
                     color: "inherit",
                     overflow: "hidden",
-                    boxShadow: "0 2px 6px rgba(0,0,0,0.04)",
-                    transition: "transform 0.18s ease",
+                    boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+                    transition: "transform 0.18s ease, box-shadow 0.18s ease",
                     display: "block",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 4px 10px rgba(0,0,0,0.08)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "none";
+                    e.currentTarget.style.boxShadow =
+                      "0 2px 6px rgba(0,0,0,0.05)";
                   }}
                 >
                   <img
@@ -88,9 +115,10 @@ export default function CaseStudiesIndex() {
                       display: "block",
                     }}
                   />
-
                   <div style={{ padding: 14 }}>
-                    <h3 style={{ margin: "0 0 8px", color: "#2E7D32" }}>{c.title}</h3>
+                    <h3 style={{ margin: "0 0 8px", color: "#2E7D32" }}>
+                      {c.title}
+                    </h3>
                     <p style={{ margin: 0, color: "#444" }}>{c.summary}</p>
                   </div>
                 </a>
@@ -112,7 +140,7 @@ export default function CaseStudiesIndex() {
                   fontWeight: 700,
                 }}
               >
-                ← Back to home
+                ← Back to Home
               </a>
             </Link>
           </div>
