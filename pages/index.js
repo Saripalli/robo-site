@@ -174,7 +174,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Our Robotic Solutions */}
+      {/* Our Robotic Solutions 
         <section
           id="solutions"
           style={{ background: "#ffffff", padding: "48px 24px", scrollMarginTop: 92 }}
@@ -189,6 +189,8 @@ export default function Home() {
             </p>
           </div>
         </section>
+      
+      */}
 
         {/* Case Studies teaser */}
         <section

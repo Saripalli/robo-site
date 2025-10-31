@@ -13,7 +13,7 @@ const PRODUCTS = [
   {
     title: "Compact Bot",
     slug: "compact-bot",
-    image: "/Simpledelivery.jpeg",
+    image: "/Compactbot.jpeg",
     short: "Small footprint automation bot.",
     details:
       "Designed for tight spaces where larger robots can’t operate. Ideal for labs, offices, and lightweight automation tasks.",
@@ -21,7 +21,7 @@ const PRODUCTS = [
   {
     title: "Dryer Bot",
     slug: "dryer-bot",
-    image: "/Scrubberbot.jpeg",
+    image: "/Dryerbot.jpeg",
     short: "Smart drying automation bot.",
     details:
       "Automates material or equipment drying processes. Integrated sensors ensure optimal results with minimal supervision.",
@@ -29,15 +29,15 @@ const PRODUCTS = [
   {
     title: "Promo Bot",
     slug: "promo-bot",
-    image: "/demo4.png",
+    image: "/Promobot.jpeg",
     short: "Interactive promotional and marketing bot.",
     details:
-      "Engages customers in mclearalls, expos, or retail environments. Features interactive displays and voice guidance.",
+      "Engages customers in malls, expos, or retail environments. Features interactive displays and voice guidance.",
   },
   {
     title: "Scrubber Bot",
     slug: "scrubber-bot",
-    image: "/images/scrubber-bot.jpg",
+    image: "/Scrubberbot.jpeg",
     short: "Autonomous floor cleaning bot.",
     details:
       "Provides industrial-grade floor scrubbing with minimal human intervention. Perfect for warehouses and public spaces.",
@@ -45,7 +45,7 @@ const PRODUCTS = [
   {
     title: "Simple Bot",
     slug: "simple-bot",
-    image: "/images/simple-bot.jpg",
+    image: "/Simplebot.jpeg",
     short: "Entry-level robot for basic automation.",
     details:
       "Affordable and versatile, designed for simple automation tasks and educational purposes.",
@@ -94,15 +94,19 @@ export default function ProductCatalog() {
               ref={(el) => (cardRefs.current[i] = el)}
               className="product-card"
             >
+              {/* Image Section */}
               <div className="product-image">
                 <img
                   src={p.image}
                   alt={p.title}
                   loading="lazy"
-                  onError={(e) => (e.currentTarget.src = "/images/placeholder.png")}
+                  onError={(e) =>
+                    (e.currentTarget.src = "/images/placeholder.png")
+                  }
                 />
               </div>
 
+              {/* Text Section */}
               <div>
                 <h3>{p.title}</h3>
                 <p className="short">{p.short}</p>
@@ -126,13 +130,13 @@ export default function ProductCatalog() {
 
         .product-card {
           display: grid;
-          grid-template-columns: 180px 1fr;
+          grid-template-columns: 200px 1fr;
           gap: 18px;
           align-items: center;
           background: #fff;
           padding: 18px;
-          border-radius: 8px;
-          box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+          border-radius: 10px;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
           opacity: 0;
           transform: translateY(20px);
           transition: opacity 0.6s ease, transform 0.6s ease;
@@ -144,25 +148,33 @@ export default function ProductCatalog() {
         }
 
         .product-image {
-          width: 180px;
+          width: 200px;
           height: 180px;
           display: flex;
           align-items: center;
           justify-content: center;
           overflow: hidden;
-          border-radius: 6px;
+          border-radius: 8px;
           background: #fafafa;
+          padding: 8px;
         }
 
         .product-image img {
-          width: 100%;
+          width: auto;
           height: 100%;
-          object-fit: cover;
+          max-width: 100%;
+          object-fit: contain;
+          transition: transform 0.3s ease;
+        }
+
+        .product-image img:hover {
+          transform: scale(1.05);
         }
 
         h3 {
           margin: 0 0 6px;
           font-size: 20px;
+          color: #1b4332;
         }
 
         .short {
@@ -197,11 +209,18 @@ export default function ProductCatalog() {
           .product-card {
             grid-template-columns: 1fr;
           }
+
           .product-image {
             width: 100%;
-            max-width: 220px;
+            max-width: 240px;
             height: auto;
             margin: 0 auto 12px;
+          }
+
+          .product-image img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
           }
         }
       `}</style>
