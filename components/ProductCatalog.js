@@ -5,7 +5,7 @@ const PRODUCTS = [
   {
     title: "Butler Bot",
     slug: "butler-bot",
-    image: "/images/butler-bot.jpg",
+    image: "/Butlerbot.jpeg",
     short: "Indoor assistant robot for hospitality and homes.",
     details:
       "Helps with tray delivery, guest support, and small logistics in hotels and homes. Payload up to 5 kg, battery life 8–12 hours.",
@@ -13,7 +13,7 @@ const PRODUCTS = [
   {
     title: "Compact Bot",
     slug: "compact-bot",
-    image: "/images/compact-bot.jpg",
+    image: "/Simpledelivery.jpeg",
     short: "Small footprint automation bot.",
     details:
       "Designed for tight spaces where larger robots can’t operate. Ideal for labs, offices, and lightweight automation tasks.",
@@ -21,7 +21,7 @@ const PRODUCTS = [
   {
     title: "Dryer Bot",
     slug: "dryer-bot",
-    image: "/images/dryer-bot.jpg",
+    image: "/Scrubberbot.jpeg",
     short: "Smart drying automation bot.",
     details:
       "Automates material or equipment drying processes. Integrated sensors ensure optimal results with minimal supervision.",
@@ -29,10 +29,10 @@ const PRODUCTS = [
   {
     title: "Promo Bot",
     slug: "promo-bot",
-    image: "/images/promo-bot.jpg",
+    image: "/demo4.png",
     short: "Interactive promotional and marketing bot.",
     details:
-      "Engages customers in malls, expos, or retail environments. Features interactive displays and voice guidance.",
+      "Engages customers in mclearalls, expos, or retail environments. Features interactive displays and voice guidance.",
   },
   {
     title: "Scrubber Bot",
@@ -53,7 +53,7 @@ const PRODUCTS = [
   {
     title: "Sweeper Bot",
     slug: "sweeper-bot",
-    image: "/images/sweeper-bot.jpg",
+    image: "/Sweeperbot.jpeg",
     short: "Smart sweeping bot for large areas.",
     details:
       "Handles sweeping in factories, campuses, or malls. Efficient navigation and extended battery life.",

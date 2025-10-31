@@ -8,7 +8,7 @@ export default function Header() {
   const navItems = [
     { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
-    { href: "/#solutions", label: "Our Robotic Solutions" },
+    { href: "/catalog", label: "Product Catalogue" },
     { href: "/#consult", label: "Consultation" },
     { href: "/#case-studies", label: "Case Studies" },
     { href: "/press-release.pdf", label: "Press", external: true }, // updated PDF link

@@ -35,7 +35,7 @@ export default function RightMenuLayout() {
   const menuItems = [
     { href: "/#about", label: "About Us" },
     { href: "/#industries", label: "Industries" },
-    { href: "/#solutions", label: "Our Robotic Solutions" },
+    { href: "/catalog", label: "Product Catalogue" },
     { href: "/case-studies", label: "Case Studies" },
     { href: "/press-release.pdf", label: "Press", external: true }, // PDF link
     {
