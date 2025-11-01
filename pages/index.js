@@ -174,24 +174,63 @@ export default function Home() {
           </div>
         </section>
 
-      {/* Our Robotic Solutions 
+      {/* Product Catalogue teaser section */}
         <section
-          id="solutions"
-          style={{ background: "#ffffff", padding: "48px 24px", scrollMarginTop: 92 }}
+          id="product-catalog"
+          style={{
+            background: "#faf6ee",
+            padding: "48px 24px",
+            scrollMarginTop: 92,
+          }}
         >
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <h2 style={{ color: "#2E7D32", marginBottom: 24, fontSize: 28 }}>
-              Our Robotic Solutions
+          <div style={{ maxWidth: 1100, margin: "0 auto", textAlign: "left" }}>
+            <h2
+              style={{
+                color: "#2E7D32",
+                marginBottom: 16,
+                fontSize: 28,
+              }}
+            >
+              Product Catalogue
             </h2>
-            <p style={{ color: "#444", fontSize: 16 }}>
-              Explore Food Delivery and Commercial Cleaning robots tailored to industry
-              needs.
+            <p
+              style={{
+                color: "#444",
+                fontSize: 17,
+                marginBottom: 20,
+                maxWidth: 800,
+              }}
+            >
+              Discover our full range of Delivery, Promotional, and Cleaning Robots
+              designed to enhance service and operations across industries.
             </p>
+            <a
+              href="/catalog"
+              style={{
+                display: "inline-block",
+                background: "#2E7D32",
+                color: "#fff",
+                padding: "10px 20px",
+                borderRadius: 8,
+                textDecoration: "none",
+                fontWeight: 600,
+                transition: "background 0.3s ease, transform 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "#256428";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "#2E7D32";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
+            >
+              Click here for our complete products list →
+            </a>
           </div>
         </section>
-      
-      */}
 
+      
         {/* Case Studies teaser */}
         <section
           id="case-studies"
