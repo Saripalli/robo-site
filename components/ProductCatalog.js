@@ -18,6 +18,7 @@ const PRODUCTS = [
     details:
       "Designed for tight spaces where larger robots can’t operate. Ideal for labs, offices, and lightweight automation tasks.",
   },
+  /*
   {
     title: "Dryer Bot",
     slug: "dryer-bot",
@@ -25,7 +26,7 @@ const PRODUCTS = [
     short: "Smart drying automation bot.",
     details:
       "Automates material or equipment drying processes. Integrated sensors ensure optimal results with minimal supervision.",
-  },
+  },*/
   {
     title: "Promo Bot",
     slug: "promo-bot",
