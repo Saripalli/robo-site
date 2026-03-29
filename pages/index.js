@@ -77,10 +77,14 @@ export default function Home() {
         <title>
           Service Robots Australia | Delivery, Hospitality & Cleaning Robots – Springle Robotics
         </title>
-
+      
+        <meta 
+          name="google-site-verification" content="xykoYa-UTiM4zHZclG2a6iSMHoPkwS-Xd2odkWAO-pc" 
+        />
         <meta
           name="description"
-          content="Springle Robotics provides service robots across Australia including delivery robots, hospitality robots and cleaning robots. Based in Sydney with flexible leasing and pilot programs."
+          content="Springle Robotics provides service robots across Australia including delivery robots, hospitality robots and cleaning robots. 
+          Based in Sydney with flexible leasing and pilot programs."
         />
         <meta
           name="keywords"
