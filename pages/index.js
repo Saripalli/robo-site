@@ -74,10 +74,22 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Springle Robotics – Service Robots for Real-World Work</title>
+        <title>
+          Service Robots Australia | Delivery, Hospitality & Cleaning Robots – Springle Robotics
+        </title>
+
         <meta
           name="description"
-          content="Springle Robotics – service robots for hospitality, cleaning, and more."
+          content="Springle Robotics provides service robots across Australia including delivery robots, hospitality robots and cleaning robots. Based in Sydney with flexible leasing and pilot programs."
+        />
+        <meta
+          name="keywords"
+          content="service robots Australia, delivery robots Australia, hospitality robots, robotics Sydney, robot waiter Sydney, cleaning robots Australia"
+        />
+        <meta property="og:title" content="Service Robots Australia – Springle Robotics" />
+        <meta
+          property="og:description"
+          content="Automate your business with delivery, hospitality and cleaning robots across Australia."
         />
       </Head>
 
@@ -89,6 +101,15 @@ export default function Home() {
         <div style={{ width: "100vw", marginLeft: "calc(50% - 50vw)" }}>
           <HeroSlider />
         </div>
+        <section style={{ padding: "40px 24px", textAlign: "center" }}>
+          <h1 style={{ fontSize: 36, color: "#2E7D32", marginBottom: 16 }}>
+            Service Robots Australia | Delivery, Hospitality & Cleaning Robots
+          </h1>
+
+          <p style={{ maxWidth: 800, margin: "0 auto", fontSize: 18, color: "#444" }}>
+            Springle Robotics delivers advanced <strong>service robots across Australia</strong>, helping businesses in <strong>Sydney</strong> automate operations with <strong>delivery robots</strong>, <strong>hospitality robots</strong>, and <strong>cleaning robots</strong>.
+          </p>
+        </section>
 
         {/* About Us */}
         <section
@@ -100,8 +121,8 @@ export default function Home() {
               About Us
             </h2>
             <p style={{ color: "#444", maxWidth: 850, lineHeight: 1.7, fontSize: 18 }}>
-              At <strong>Springle Robotics</strong>, our vision is simple yet powerful: to
-              serve people through technology. We believe robots should never replace human
+              At <strong>Springle Robotics</strong>, we provide <strong>service robots in Australia</strong>  designed to support hospitality, retail, and aged care industries. Our mission is simple yet powerful: 
+              to serve people through technology.We believe robots should never replace human
               connection — instead, they should empower it. By taking care of repetitive
               and time-consuming tasks, our service robots allow people to focus on what
               truly matters: care, creativity, and meaningful interactions.
@@ -126,6 +147,36 @@ export default function Home() {
               where technology uplifts lives, strengthens communities, and helps people
               shine.
             </p>
+          </div>
+        </section>
+
+        {/* ✅ Added new section on 29th March for Search Engine Optimization */}
+        <section style={{ background: "#ffffff", padding: "48px 24px" }}>
+          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
+            <h2 style={{ color: "#2E7D32", fontSize: 28 }}>
+              Our Service Robot Solutions in Australia
+            </h2>
+
+            <p style={{ color: "#444", marginTop: 10 }}>
+              We provide a wide range of <strong>service robots in Australia</strong> designed to improve efficiency and reduce operational costs.
+            </p>
+            <div style={{ marginTop: 20 }}>
+              <h3>Delivery Robots</h3>
+              <p>
+                Our <strong>autonomous delivery robots</strong> help restaurants and cafes improve service speed and efficiency.
+              </p>
+
+              <h3>Hospitality Robots</h3>
+              <p>
+                Enhance customer experience with <strong>robot waiters in Sydney</strong> and hospitality automation.
+              </p>
+
+              <h3>Cleaning Robots</h3>
+              <p>
+                Our <strong>commercial cleaning robots</strong> support retail, airports, and public spaces across Australia.
+              </p>
+
+            </div>
           </div>
         </section>
 
@@ -248,7 +299,7 @@ export default function Home() {
               }}
             >
               <a href="/case-studies/kikato-cafe" style={teaserCard}>
-                <img src="/case-studies/kikato-thumb.jpg" alt="Kikato café case study" style={thumbStyle} />
+                <img src="/case-studies/kikato-thumb.jpg" alt="Robot waiter serving in Sydney cafe case study" style={thumbStyle} />
                 <div style={{ padding: 12 }}>
                   <h3 style={{ margin: 0, color: "#2E7D32" }}>
                     Kikato in a CBD Coffee Lounge
@@ -260,7 +311,7 @@ export default function Home() {
               </a>
 
               <a href="/case-studies/robot-ready" style={teaserCard}>
-                <img src="/case-studies/robotready-thumb.jpg" alt="Robot-ready case study" style={thumbStyle} />
+                <img src="/case-studies/robotready-thumb.jpg" alt="Robot-ready case study"   style={thumbStyle} />
                 <div style={{ padding: 12 }}>
                   <h3 style={{ margin: 0, color: "#2E7D32" }}>
                     Getting a Restaurant “Robot-Ready”
@@ -391,7 +442,6 @@ export default function Home() {
           </div>
         </section>
 
-
         {/* Quick FAQs */}
         <section
           id="quick-faqs"
@@ -403,14 +453,13 @@ export default function Home() {
             </h2>
             <ol style={{ margin: 0, paddingLeft: 18, color: "#444", lineHeight: 1.7 }}>
               <li style={{ marginBottom: 10 }}>
-                <strong>Do I need to buy the robots?</strong> No, we offer flexible leasing.
+                <strong>How much does a robot waiter cost in Sydney?</strong> Costs vary based on leasing plans and features
               </li>
               <li style={{ marginBottom: 10 }}>
-                <strong>Is it hard for staff to use?</strong> Setup and training are simple —
-                ready in under an hour.
+                <strong>ICan I lease a service robot in Australia?</strong> Yes, flexible leasing and pilot programs are available.
               </li>
               <li style={{ marginBottom: 10 }}>
-                <strong>Can I try before committing?</strong> Yes — free 2-week pilot available.
+                <strong>How do delivery robots improve efficiency?</strong> They reduce manual workload and speed up service.
               </li>
             </ol>
             <div style={{ marginTop: 16 }}>
@@ -430,8 +479,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-
         <footer
           style={{
             borderTop: "1px solid #e8e3da",
