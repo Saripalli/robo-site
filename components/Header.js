@@ -11,7 +11,7 @@ export default function Header() {
     { href: "/catalog", label: "Product Catalogue" },
     { href: "/#consult", label: "Consultation" },
     { href: "/#case-studies", label: "Case Studies" },
-    { href: "/press-release.pdf", label: "Press", external: true }, // updated PDF link
+    { href: "/press", label: "Press", external: true }, // updated PDF link
     { href: "/#contact", label: "Contact Us" },
   ];
 

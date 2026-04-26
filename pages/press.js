@@ -1,56 +1,98 @@
 import Head from "next/head";
-import Link from "next/link";
 
 export default function Press() {
+  const pressArticles = [
+    {
+      title: "Interview with Tech Entrepreneur – Shynitha",
+      source: "Empowered BWB",
+      date: "April 2026",
+      link: "https://empoweredbwb.com/2026/04/13/interview-with-tech-entrepreneur-shynitha/",
+      type: "Article",
+      description:
+        "An in-depth interview discussing the vision behind Springle Robotics and the future of service robots in Australia.",
+    },
+    {
+      title: "Springle Robotics in Action",
+      source: "Instagram",
+      date: "2026",
+      link: "https://www.instagram.com/p/DPVtBTfj-hd/",
+      type: "Social",
+      description:
+        "A real-world glimpse of our robots supporting hospitality operations and improving efficiency.",
+    },
+  ];
+
   return (
     <>
       <Head>
-        <title>Press | Springlerobotics</title>
+        <title>Press & Media | Springle Robotics</title>
         <meta
           name="description"
-          content="Read about Springlerobotics in the press and explore our latest media coverage."
+          content="Explore media coverage, articles and press mentions about Springle Robotics and service robots in Australia."
         />
       </Head>
 
-      <main className="max-w-4xl mx-auto py-16 px-6">
-        <h1 className="text-4xl font-bold mb-6 text-gray-900">
-          Press Coverage
-        </h1>
+      <div style={{ background: "#fdf8f3", minHeight: "100vh", padding: "48px 24px" }}>
+        <div style={{ maxWidth: 1000, margin: "0 auto" }}>
+          
+          {/* Page Title */}
+          <h1 style={{ color: "#2E7D32", fontSize: 36, marginBottom: 16 }}>
+            Press & Media
+          </h1>
 
-        <p className="text-lg text-gray-600 mb-10">
-          Here are some of the articles and publications where Springlerobotics
-          has been featured. Check back soon for more updates.
-        </p>
-
-        {/* PDF Link Section */}
-        <div className="bg-gray-100 p-6 rounded-lg shadow-md">
-          <h2 className="text-2xl font-semibold mb-4 text-gray-800">
-            Featured Article
-          </h2>
-          <p className="text-gray-600 mb-4">
-            Click below to view our press release.
+          <p style={{ color: "#444", fontSize: 18, marginBottom: 30 }}>
+            Discover how Springle Robotics is featured across media, showcasing innovations in 
+            <strong> service robots in Australia</strong>, hospitality automation, and business transformation.
           </p>
 
-          <a
-            href="/press-release.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition"
-          >
-            View Press Article (PDF)
-          </a>
-        </div>
+          {/* Articles List */}
+          {pressArticles.map((article, index) => (
+            <div
+              key={index}
+              style={{
+                background: "#fff",
+                border: "1px solid #ece6da",
+                borderRadius: 10,
+                padding: 20,
+                marginBottom: 20,
+                boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+              }}
+            >
+              <h2 style={{ marginBottom: 8 }}>
+                <a
+                  href={article.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ color: "#2E7D32", textDecoration: "none" }}
+                >
+                  {article.title}
+                </a>
+              </h2>
 
-        {/* Optional Back Link */}
-        <div className="mt-10">
-          <Link
-            href="/"
-            className="text-blue-600 hover:underline text-sm"
-          >
-            ← Back to Home
-          </Link>
+              <p style={{ fontSize: 14, color: "#777", marginBottom: 10 }}>
+                {article.source} • {article.date} • {article.type}
+              </p>
+
+              <p style={{ color: "#444", marginBottom: 10 }}>
+                {article.description}
+              </p>
+
+              <a
+                href={article.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#2E7D32",
+                  fontWeight: 600,
+                  textDecoration: "underline",
+                }}
+              >
+                Read full article →
+              </a>
+            </div>
+          ))}
         </div>
-      </main>
+      </div>
     </>
   );
 }
