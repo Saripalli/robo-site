@@ -5,6 +5,7 @@ import Link from "next/link";
 import Header from "../components/Header";
 import RightMenuLayout from "../components/RightMenuLayout";
 import HeroSlider from "../components/HeroSlider";
+import Footer from "../components/Footer";
 
 export default function Home() {
   // Consultation form state

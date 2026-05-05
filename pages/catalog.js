@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import RightMenuLayout from "../components/RightMenuLayout";
 import ProductCatalog from "../components/ProductCatalog";
 import Breadcrumb from "../components/Breadcrumb";
+import Footer from "../components/Footer";
 
 export default function CatalogPage() {
   const [showButton, setShowButton] = useState(false);

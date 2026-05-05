@@ -1,6 +1,8 @@
 // components/Header.js
 import Link from "next/link";
 import { useState } from "react";
+import Footer from "../components/Footer";
+
 
 export default function Header() {
   const [open, setOpen] = useState(false);

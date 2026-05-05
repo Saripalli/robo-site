@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import Image from "next/image";
+import Footer from "../components/Footer";
 
 const slides = [
   "/demo1.png","/demo2.png","/demo3.png",

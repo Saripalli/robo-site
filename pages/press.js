@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../components/Footer";
 
 export default function Press() {
   const pressArticles = [

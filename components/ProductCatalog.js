@@ -1,5 +1,6 @@
 // components/ProductCatalog.js
 import React, { useEffect, useRef } from "react";
+import Footer from "../components/Footer";
 
 const PRODUCTS = [
   {
