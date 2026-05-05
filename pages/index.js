@@ -484,16 +484,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <footer
-          style={{
-            borderTop: "1px solid #e8e3da",
-            color: "#6b7280",
-            padding: 18,
-            textAlign: "center",
-          }}
-        >
-          © {new Date().getFullYear()} Springle Robotics. All rights reserved.
-        </footer>
+        <import Footer from "../components/Footer";
       </div>
     </>
   );
