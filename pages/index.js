@@ -484,7 +484,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <import Footer from "../components/Footer";
+      <Footer />
       </div>
     </>
   );

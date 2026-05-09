@@ -4,17 +4,49 @@ export default function Footer() {
       style={{
         borderTop: "1px solid #e8e3da",
         color: "#6b7280",
-        padding: 18,
+        padding: 24,
         textAlign: "center",
-        fontSize: 14,
+        background: "#fff",
+        marginTop: 40,
       }}
     >
-      <div style={{ marginBottom: 6 }}>
-        © {new Date().getFullYear()} Springle Robotics. All rights reserved.
+      <div style={{ marginBottom: 10, fontSize: 14 }}>
+        © 2026 Springle Robotics Pty Ltd.
       </div>
 
-      <div style={{ maxWidth: 800, margin: "0 auto", lineHeight: 1.5 }}>
-        We respect your privacy. Any information you share with Springle Robotics will be used only to respond to your enquiry and will never be sold or shared with third parties.
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 16,
+          flexWrap: "wrap",
+          fontSize: 14,
+        }}
+      >
+        <a
+          href="/privacy-policy"
+          style={{ color: "#2E7D32", textDecoration: "none" }}
+        >
+          Privacy Policy
+        </a>
+
+        <span>•</span>
+
+        <a
+          href="/terms"
+          style={{ color: "#2E7D32", textDecoration: "none" }}
+        >
+          Terms of Use
+        </a>
+
+        <span>•</span>
+
+        <a
+          href="mailto:info@springlerobotics.com.au?subject=Enquiry from Website"
+          style={{ color: "#2E7D32", textDecoration: "none" }}
+        >
+          Contact Us
+      </a>
       </div>
     </footer>
   );
