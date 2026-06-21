@@ -37,28 +37,12 @@ const PRODUCTS = [
       "Engages customers in malls, expos, or retail environments. Features interactive displays and voice guidance.",
   },
   {
-    title: "Scrubber Bot",
-    slug: "scrubber-bot",
-    image: "/Scrubberbot.jpeg",
-    short: "Autonomous floor cleaning bot.",
-    details:
-      "Provides industrial-grade floor scrubbing with minimal human intervention. Perfect for warehouses and public spaces.",
-  },
-  {
     title: "Simple Bot",
     slug: "simple-bot",
     image: "/Simplebot.jpeg",
     short: "Entry-level robot for basic automation.",
     details:
       "Affordable and versatile, designed for simple automation tasks and educational purposes.",
-  },
-  {
-    title: "Sweeper Bot",
-    slug: "sweeper-bot",
-    image: "/Sweeperbot.jpeg",
-    short: "Smart sweeping bot for large areas.",
-    details:
-      "Handles sweeping in factories, campuses, or malls. Efficient navigation and extended battery life.",
   },
 ];
 
